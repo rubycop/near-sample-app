@@ -1,0 +1,56 @@
+{
+  "name": "smart-p2p",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "build:contract": "./build.sh",
+    "dev:deploy:contract": "yarn build:contract && rm -rf neardev && ./dev-deploy.sh && ./bootstrap.sh",
+    "deploy:contract": "yarn build:contract && ./deploy.sh",
+    "prestart": "rm -rf ./parcel-cache",
+    "patch:config": "",
+    "start": "react-scripts start"
+  },
+  "devDependencies": {
+    "@babel/core": "~7.14.0",
+    "@babel/preset-env": "~7.14.0",
+    "@babel/preset-react": "~7.13.13",
+    "autoprefixer": "^10.4.1",
+    "env-cmd": "~10.1.0",
+    "near-cli": "~2.1.1",
+    "nodemon": "~2.0.3",
+    "postcss": "^8.4.5",
+    "shelljs": "~0.8.4",
+    "tailwindcss": "^3.0.12"
+  },
+  "dependencies": {
+    "@headlessui/react": "^1.4.3",
+    "@heroicons/react": "^1.0.5",
+    "buffer": "^6.0.3",
+    "near-api-js": "~0.43.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-router-dom": "^6.2.1",
+    "react-scripts": "5.0.0",
+    "styled-components": "^5.3.3"
+  },
+  "resolutions": {
+    "@babel/preset-env": "7.13.8"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
